@@ -16,7 +16,11 @@ require.config({
 			'BigVideo': {
 				deps: ['jquery'],
 				exports: 'BigVideo'
-		}
+		},
+			'jquery-ui': {
+				deps: ['jquery'],
+				exports: 'jquery-ui'
+			}
 	}
 });
 
@@ -31,7 +35,7 @@ require(['jquery'], function ($) {
 	});
 });
 
-require(['jquery', 'jquery-ui', 'BigVideo'], function (jQuery) {
+require(['jquery', 'jquery-ui', 'BigVideo'], function ($) {
 	$(function() {
 		var BV = new $.BigVideo({useFlashForFirefox:false});
 		BV.init();
