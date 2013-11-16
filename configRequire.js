@@ -1,9 +1,11 @@
 var require = {
 	baseUrl: '.',
 	paths: {
-		'BigVideo': 'resources/js/BigVideo.js/lib/bigvideo',
-		'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
+		'analytics': 'resources/js/analytics',
+		'modernizer': 'resources/js/modernizr-2.6.2.min',
+		'jquery': 'resources/js/jquery-1.10.2.min',
 		'jquery-ui': 'resources/js/jquery-ui/ui/jquery-ui',
+		'BigVideo': 'resources/js/BigVideo.js/lib/bigvideo',
 		'videojs': 'resources/js/video.js/video',
 		'imagesloaded': 'resources/js/imagesloaded/imagesloaded',
 		'EventEmitter': 'resources/js/eventEmitter/EventEmitter',

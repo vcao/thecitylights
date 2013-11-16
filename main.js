@@ -1,7 +1,18 @@
-require(['jquery', 'BigVideo'], function ($) {
+/**
+ * RequireJs Bootstrap
+ */
+require([
+	'jquery',
+	'BigVideo',
+	'modernizer',
+	'analytics'
+], function ($) {
 	$(function () {
 		// Initialize background
-		var BV = new $.BigVideo({useFlashForFirefox: false});
+		var BV = new $.BigVideo({
+			container: $('body'),
+			useFlashForFirefox: false
+		});
 		BV.init();
 		if (Modernizr.touch) {
 			BV.show('resources/images/fireworks.jpg');
