@@ -1,0 +1,38 @@
+.background-size (@value) {
+	-webkit-background-size: @value;
+	background-size: @value;
+}
+.border-radius (@radius: 3px) {
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.display-flex {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.justify-content (@value) {
+  -webkit-justify-content: @value;
+  -webkit-box-pack: @value;
+  -moz-justify-content: @value;
+  -ms-flex-pack: @value;
+  justify-content: @value;
+}
+.align-items (@value) {
+  -webkit-align-items: @value;
+  -webkit-box-align: @value;
+  -moz-align-items: @value;
+  -ms-flex-align: @value;
+  align-items: @value;
+}
+.transition (@properties) {
+	-webkit-transition: @properties;
+	-moz-transition: @properties;
+	-o-transition: @properties;
+	transition: @properties;
+}

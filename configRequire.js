@@ -5,6 +5,8 @@ var require = {
 		'modernizer': 'resources/js/modernizr-2.6.2.min',
 		'jquery': 'resources/js/jquery-1.10.2.min',
 		'jquery-ui': 'resources/js/jquery-ui/ui/jquery-ui',
+		'backbone': 'resources/js/backbone-min',
+		'underscore': 'resources/js/underscore-min',
 		'BigVideo': 'resources/js/BigVideo.js/lib/bigvideo',
 		'videojs': 'resources/js/video.js/video',
 		'imagesloaded': 'resources/js/imagesloaded/imagesloaded',
@@ -19,6 +21,10 @@ var require = {
 		'jquery-ui': {
 			deps: ['jquery'],
 			exports: 'jquery-ui'
+		},
+		'backbone': {
+			deps: ['underscore'],
+			exports: 'Backbone'
 		}
 	}
 };
