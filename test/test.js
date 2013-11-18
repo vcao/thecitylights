@@ -8,6 +8,6 @@
 // 	});
 // });
 
-define(['jquery'], function($) {
+define(['./js'], function($) {
 	$('#date').text('changed by jquery hello! world');
 });
