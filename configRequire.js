@@ -19,8 +19,7 @@ var require = {
 			exports: 'videojs'
 		},
 		'jquery-ui': {
-			deps: ['jquery'],
-			exports: 'jquery-ui'
+			deps: ['jquery']
 		},
 		'backbone': {
 			deps: ['underscore'],
