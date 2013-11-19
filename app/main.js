@@ -4,7 +4,6 @@ define(function (require) {
 	var Backbone = require('backbone');
 	return {
 		init: function () {
-			// Initialize background
 			var BV = new $.BigVideo({
 				container: $('#home'),
 				useFlashForFirefox: false
@@ -15,28 +14,30 @@ define(function (require) {
 			} else {
 				BV.show('resources/videos/bg_tcl.mp4', {altSource: 'resources/videos/bg_tcl.ogv', ambient: true});
 			}
-			// BEGIN TEST // TODO REMOVE
-			BV.getPlayer().pause();
-			// END TEST
-
-			// Configure menu
-//			$('#menu').mouseenter(function () {
-//				$('#nav-menu').slideDown();
-//			}).mouseleave(function () {
-//					$('#nav-menu').slideUp();
-//				});
 
 			// Navigation
 			var Handler = function (route) {
 				return function () {
-					$('section').fadeOut();
-					$('section#' + route).fadeIn();
+					// get name of current section
+					var $current = $('section:visible');
+					$current.fadeOut().promise()
+						.done(function() {
+							// pause previous video if applicable
+							if ($current[0].id === 'home') {
+								BV.getPlayer().pause();
+							}
+							// start routes video if applicable
+							if (route === 'home') {
+								BV.getPlayer().play();
+							}
+							$('#' + route).fadeIn()
+						});
 				};
 			};
 			var router = new Backbone.Router({
 				routes: {
 					'': new Handler('home'),
-					'connect': new Handler('about'),
+					'about': new Handler('about'),
 					'connect': new Handler('connect'),
 					'donate': new Handler('donate'),
 					'mission': new Handler('mission')
