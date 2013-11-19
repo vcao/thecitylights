@@ -38,17 +38,42 @@
 <section id="connect">
 
 </section>
-<section id="donate">
-
-</section>
 <section id="mission">
-	<h1>Mission</h1>
-	<p>
-		The City Lights exists in order to instill<br/>
-		a glorious unrest in every city and soul<br/>
-		for the freedom found in Jesus Christ and His Church.<br/>
-		In light of the new evangelization.
-	</p>
+	<div id="one"></div>
+	<div id="two"></div>
+	<div id="three">
+		<div id="mission-content">
+			<h1>Mission</h1>
+			<p>
+				The City Lights exists in order to instill<br/>
+				a glorious unrest in every city and soul<br/>
+				for the freedom found in Jesus Christ and His Church.<br/>
+				In light of the new evangelization.
+			</p>
+		</div>
+		<div id="threeImg"></div>
+	</div>
+	
+</section>
+<section id="donate">
+	<div id="donate-container">
+		<h1>Donate</h1>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="donate-form">
+			<input type="text" name="amount" id="amount" required="required" placeholder="Enter an amount">
+			<input type="hidden" name="cmd" value="_donations">
+			<input type="hidden" name="business" value="NPLGAS6PTHFD2">
+			<input type="hidden" name="lc" value="US">
+			<input type="hidden" name="item_name" value="The City Lights">
+			<input type="hidden" name="item_number" value="TCL">
+			<input type="hidden" name="no_note" value="0">
+			<input type="hidden" name="cn" value="Message:">
+			<input type="hidden" name="no_shipping" value="1">
+			<input type="hidden" name="currency_code" value="USD">
+			<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHosted">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
 </section>
 <div id="email_signup">
 	<!-- Begin MailChimp Signup Form -->
