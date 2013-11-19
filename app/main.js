@@ -27,23 +27,17 @@ define(function (require) {
 //				});
 
 			// Navigation
-			var home = function () {
-				$('section').hide();
-				$('section#home').show();
-			};
-			var mission = function () {
-				$('section').hide();
-				$('section#mission').show();
-				console.log('Mission complete');
-			};
-			var donate = function () {
-
+			var Handler = function (route) {
+				return function () {
+					$('section').fadeOut();
+					$('section#' + route).fadeIn();
+				};
 			};
 			var router = new Backbone.Router({
 				routes: {
-					'': home,
-					'mission': mission,
-					'donate': donate
+					'': new Handler('home'),
+					'mission': new Handler('mission'),
+					'donate': new Handler('donate')
 				}
 			});
 			Backbone.history.start();
