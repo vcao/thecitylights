@@ -36,8 +36,10 @@ define(function (require) {
 			var router = new Backbone.Router({
 				routes: {
 					'': new Handler('home'),
-					'mission': new Handler('mission'),
-					'donate': new Handler('donate')
+					'connect': new Handler('about'),
+					'connect': new Handler('connect'),
+					'donate': new Handler('donate'),
+					'mission': new Handler('mission')
 				}
 			});
 			Backbone.history.start();
