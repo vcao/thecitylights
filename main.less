@@ -228,8 +228,9 @@ nav {
 			height: 100%; 
 			position: relative; 
 			z-index: 0; 
-			padding: 0; 
-			margin: 0;
+			padding: 0 !important; 
+			margin: 0 !important;
+			float: left;
 			} 
 		#one {
 			background: url('resources/images/bg-mission-one.jpg') center center;
@@ -252,14 +253,15 @@ nav {
 				top: 0;
 				left: 0;
 
-				background: #333;
+				background: url('resources/images/bg-mission-content.gif') repeat;
 				display: inline-block;
-				height: 315px;
+				height: 400px;
 				
 				padding: 1rem;
+				padding-top: 2.5rem;
 				text-align: center;
 				line-height: 3;
-				width: 99%;
+				width: 100%;
 				letter-spacing: 1px;
 
 				h1 {
