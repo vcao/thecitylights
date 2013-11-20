@@ -292,16 +292,57 @@ nav {
 			height: 250px;
 			text-align: center;
 			display: inline;
+			border: 1px solid white;
 		}
 		form {
-			input#amount {
-				-webkit-border-radius: 3px;
-				-moz-border-radius: 3px;
-				border-radius: 3px;
-				border: 1px solid white;
+			@aHt: 45px;
+			#amountContainer {
 				background: #fff;
-				height: 30px;
+				width: 220px;
+				height: @aHt;
+				white-space: nowrap;
+				margin: 0 auto;
+				display: block;
+				z-index: 0;
+				.border-radius(3px);
+				#aLeft, #aRight {
+					display: inline-block;
+					color: #ccc;
+					height: @aHt;
+					float: left;
+					vertical-align: center;
+					padding-top: 13px;
+				}
+				#aLeft {
+					padding-left: 5px;
+				}
+				#aRight {
+					text-align: right;
+				}
+				input#amount {
+				float: left;
+				margin: 0;
+				display: inline-block;
+				border: 1px solid white;
+				text-align: center;
+				background: #fff;
+				height: @aHt;
+					&:focus {
+						outline: none;
+					}
+				}
 			}
+			input[type="submit"] {
+					display: block;
+					height: @aHt;
+					background: #fff;
+					text-transform: uppercase;
+					border: 0;
+					margin: 0 auto;
+					margin-top: 10px;
+					width: 220px;
+					padding: 0;
+				}
 		}
 	}
 }

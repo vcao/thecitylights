@@ -328,13 +328,58 @@ nav #nav-menu a:hover {
     height: 250px;
     text-align: center;
     display: inline;
-  }
-  #donate form input#amount {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     border: 1px solid white;
+  }
+  #donate form #amountContainer {
     background: #fff;
-    height: 30px;
+    width: 220px;
+    height: 45px;
+    white-space: nowrap;
+    margin: 0 auto;
+    display: block;
+    z-index: 0;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+  #donate form #amountContainer #aLeft,
+  #donate form #amountContainer #aRight {
+    display: inline-block;
+    color: #ccc;
+    height: 45px;
+    float: left;
+    vertical-align: center;
+    padding-top: 13px;
+  }
+  #donate form #amountContainer #aLeft {
+    padding-left: 5px;
+  }
+  #donate form #amountContainer #aRight {
+    text-align: right;
+  }
+  #donate form #amountContainer input#amount {
+    float: left;
+    margin: 0;
+    display: inline-block;
+    border: 1px solid white;
+    text-align: center;
+    background: #fff;
+    height: 45px;
+  }
+  #donate form #amountContainer input#amount:focus {
+    outline: none;
+  }
+  #donate form input[type="submit"] {
+    display: block;
+    height: 45px;
+    background: #fff;
+    text-transform: uppercase;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 220px;
+    padding: 0;
   }
 }
