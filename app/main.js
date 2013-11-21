@@ -3,6 +3,7 @@ define(function (require) {
 	var BigVideo = require('BigVideo');
 	var Backbone = require('backbone');
 	return {
+		// Video Player
 		init: function () {
 			var BV = new $.BigVideo({
 				container: $('#home'),
@@ -23,7 +24,7 @@ define(function (require) {
 					$current.fadeOut().promise()
 						.done(function() {
 							// pause previous video if applicable
-							if ($current[0].id === 'home') {
+							if ($current[0] && $current[0].id === 'home') {
 								BV.getPlayer().pause();
 							}
 							// start routes video if applicable

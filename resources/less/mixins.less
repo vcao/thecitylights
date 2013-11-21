@@ -36,3 +36,40 @@
 	-o-transition: @properties;
 	transition: @properties;
 }
+
+.placeholder(@typeface, @fstyle, @color, @font-size) {
+  ::-webkit-input-placeholder {
+    font-family: @typeface;
+    font-style: @fstyle;
+    color: @color;
+    font-size: @font-size rem;
+    vertical-align: middle;
+
+  }
+  ::-moz-placeholder {
+    font-family: @typeface;
+    font-style: @fstyle;
+    color: @color;
+    font-size: @font-size rem;
+    vertical-align: middle;
+
+  }
+  /* firefox 19+ */
+  :-ms-input-placeholder {
+    font-family: @typeface;
+    font-style: @fstyle;
+    color: @color;
+    font-size: @font-size rem;
+    vertical-align: middle;
+
+  }
+  /* ie */
+  input:-moz-placeholder {
+    font-family: @typeface;
+    font-style: @fstyle;
+    color: @color;
+    font-size: @font-size rem;
+    vertical-align: middle;
+
+  }
+}

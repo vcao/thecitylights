@@ -84,40 +84,7 @@ nav {
 		display: block;
 		margin: .5rem auto;
 	}
-	::-webkit-input-placeholder {
-		font-family: Georgia;
-		font-style: italic;
-		color: #ccc;
-		font-size: .75rem;
-		vertical-align: middle;
-		padding-top: 2px;
-	}
-	::-moz-placeholder {
-		font-family: Georgia;
-		font-style: italic;
-		color: #ccc;
-		font-size: .75rem;
-		vertical-align: middle;
-		padding-top: 2px;
-	}
-	/* firefox 19+ */
-	:-ms-input-placeholder {
-		font-family: Georgia;
-		font-style: italic;
-		color: #ccc;
-		font-size: .75rem;
-		vertical-align: middle;
-		padding-top: 2px;
-	}
-	/* ie */
-	input:-moz-placeholder {
-		font-family: Georgia;
-		font-style: italic;
-		color: #ccc;
-		font-size: .75rem;
-		vertical-align: middle;
-		padding-top: 2px;
-	}
+	.placeholder("Georgia", "italic", "#ccc", 0.75);
 	input[type="email"] {
 		vertical-align: bottom;
 		width: 150px;
@@ -205,8 +172,8 @@ nav {
 			height: 100%;
 			padding: 80px 0;
 			img {
-				width: 60%;
 				min-width: 448px;
+				width: 60%;
 			}
 		}
 		#date {
@@ -216,6 +183,10 @@ nav {
 			margin: 0;
 			text-align: right;
 		}
+	}
+
+	#about {
+		
 	}
 
 	#mission {
@@ -285,29 +256,32 @@ nav {
 			
 	}
 	#donate {
-		.display-flex;
-		.justify-content(center);
-		.align-items(center);
+		
+		.container {
+			// .display-flex;
+			// .justify-content(center);
+			// .align-items(center);
+			height: 100%;
+			padding-left: 350px;
+			padding-top: 80px;
+			vertical-align: top;
+		}
 		#donate-container {
-			width: 250px;
+			width: 300px;
 			height: 250px;
 			text-align: center;
-			display: inline;
-			border: 1px solid white;
+			float: left;
 		}
 		form {
 			@aHt: 45px;
 			#amountContainer {
 				background: #fff;
-				width: 220px;
 				height: @aHt;
 				white-space: nowrap;
 				margin: 0 auto;
-				display: block;
 				z-index: 0;
 				.border-radius(3px);
 				#aLeft, #aRight {
-					display: inline-block;
 					color: #ccc;
 					height: @aHt;
 					float: left;
@@ -319,6 +293,10 @@ nav {
 				}
 				#aRight {
 					text-align: right;
+					padding-right: 5px;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
 				}
 				input#amount {
 				float: left;
@@ -333,7 +311,7 @@ nav {
 					}
 				}
 			}
-			input[type="submit"] {
+			button[type="submit"] {
 					display: block;
 					height: @aHt;
 					background: #fff;
@@ -344,6 +322,17 @@ nav {
 					width: 220px;
 					padding: 0;
 				}
+		}
+		#faq {
+			float: left;
+			width: 600px;
+			padding-left: 50px;
+			p {
+				font-family: Georgia;
+				// font-style: italic;
+				text-transform: none;
+				line-height: 1.5;
+			}
 		}
 	}
 }
