@@ -47,4 +47,12 @@ define(function (require) {
 			Backbone.history.start();
 		}
 	};
+
+	// Donate FAQ
+	$('h4 a').click(function() {
+		e.preventDefault();
+		$('#faq p').slideToggle();
+	});
+
+
 });
