@@ -48,11 +48,6 @@ define(function (require) {
 		}
 	};
 
-	// Donate FAQ
-	$('h4 a').click(function() {
-		e.preventDefault();
-		$('#faq p').slideToggle();
+
 	});
-
-
 });
