@@ -16,6 +16,12 @@ define(function (require) {
 				BV.show('resources/videos/bg_tcl.mp4', {altSource: 'resources/videos/bg_tcl.ogv', ambient: true});
 			}
 
+			// FAQ logic
+			$('.faq a').click(function (event) {
+				event.preventDefault();
+				$(this).parents('.faq').find('p').slideToggle();
+			});
+
 			// Navigation
 			var Handler = function (route) {
 				return function () {
@@ -47,7 +53,4 @@ define(function (require) {
 			Backbone.history.start();
 		}
 	};
-
-
-	});
 });
