@@ -22,6 +22,12 @@ define(function (require) {
 				$(this).parents('.faq').find('p').slideToggle();
 			});
 
+			// Nav toggle
+			$('#menu-icon').click(function(e) {
+				e.preventDefault();
+				$('#nav-menu').slideToggle();
+			});
+
 			// Navigation
 			var Handler = function (route) {
 				return function () {
