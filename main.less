@@ -9,6 +9,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
 
 html, body, {
 	overflow-x: hidden;
@@ -36,23 +37,33 @@ section {
 				TYPOGRAPHY
 ***************************/
 h1 {
-
+	font-size: 3rem;
+	margin: 0 auto;
+	border-bottom: 2px solid white;
+	width: 80%;
+	line-height: 2;
+	letter-spacing: 10px;
+	text-align: center;
 }
 
 h2 {
 
 }
 
+p {
+	font-family: 'Ubuntu', san-serif;
+}
 
 
 /**************************
 				NAVIGATION
 **************************/
 #menu-icon {
-	top: 5px;
+	top: 10px;
 	left: 5px;
 	position: absolute;
 	display: inline-block;
+	font-size: 1.25rem;
 	a {
 		color: white;
 		text-decoration: none;
@@ -68,6 +79,7 @@ nav {
 		display: inline-block;
 		margin: 0;
 		padding: 0;
+		border: 0;
 	}
 	#nav-menu {
 		display: none;
@@ -91,7 +103,10 @@ nav {
 	}
 }
 #email_signup {
+	z-index: 1;
 	text-align: center;
+	display: block;
+	position: relative;
 	label {
 		display: block;
 	}
@@ -114,8 +129,7 @@ nav {
 		background: transparent;
 		height: 30px;
 		padding: 2px 5px;
-		border: 0;
-		border-bottom: 2px solid white;
+		border: 2px solid white;
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
 		border-radius: 0;
@@ -125,8 +139,8 @@ nav {
 		text-transform: uppercase;
 		.transition(.25s);
 		&:hover {
-			color: black;
-			border-bottom: 2px solid black;
+			color: rgba(255, 213, 153, 1.0);
+			border: 2px solid rgba(255, 213, 153, 1.0);
 		}
 	}
 }
@@ -147,6 +161,14 @@ nav {
 			width: 80%;
 		}
 	}
+	#subheadline {
+		font-size: .75rem;
+		text-align: center;
+		margin: 0 auto;
+		position: relative;
+		z-index: 9999;
+
+	}
 	#date {
 		margin: 0 0 1rem 0;
 		font-size: 1rem;
@@ -156,15 +178,22 @@ nav {
 }
 
 #mission {
-	background: url('resources/images/bg-mission-content.gif') repeat;
+	background: #000;
 	#one, #two {
 		display: none;
 	}
 	#three {
 		width: 100%;
-
+		#mission-content-mobile {
+			font-size: 1rem;
+			font-weight: bold;
+			margin: 0 auto;
+			width: 90%;
+			text-align: justify;
+		}
 		#mission-content {
-			font-size: .9em;
+			display: none;
+			font-size: 1rem;
 			margin: 0 auto;
 			width: 90%;
 			text-align: justify;
@@ -173,19 +202,17 @@ nav {
 }
 
 #about {
-	background: url('resources/images/bg-about.jpg') no-repeat;
-	height: 100%;
+	background: #000;
 	.background-size(cover);
 	.container {
 		height: 100%;
-		padding-top: 80px;
 		vertical-align: top;
 		text-align: justify;
-		overflow-y: scroll;
 		}
 	#about-content {
 		position: relative;
 		z-index: 1;
+		padding: 1rem;
 	}
 }
 
@@ -201,6 +228,7 @@ nav {
 			width: 300px;
 			text-align: center;
 			margin: 0 auto;
+			padding-top: 20px;
 		}
 		form {
 			@aHt: 45px;
@@ -250,8 +278,7 @@ nav {
 					height: @aHt;
 					background: transparent;
 					text-transform: uppercase;
-					border: 0;
-					border-bottom: 2px solid white;
+					border: 2px solid white;
 					letter-spacing: 1px;
 					margin: 0 auto;
 					margin-top: 10px;
@@ -259,8 +286,8 @@ nav {
 					padding: 0;
 					.transition(.25s);
 					&:hover {
-						color: black;
-						border-bottom: 2px solid black;
+						color: rgba(255, 213, 153, 1.0);
+						border: 2px solid rgba(255, 213, 153, 1.0);
 					}
 				}
 		}
@@ -272,9 +299,7 @@ nav {
 	z-index: 1;
 	p {
 		display: none;
-		font-family: Georgia;
 		text-transform: none;
-		font-size: 1rem;
 		text-align: justify;
 	}
 	a {
@@ -295,7 +320,7 @@ nav {
 	/* Style adjustments for viewports that meet the condition */
 	nav {
 		position: fixed;
-		z-index: 1;
+		z-index: 9999;
 		left: 5%;
 		width: auto;
 
@@ -336,7 +361,8 @@ nav {
 			padding: 80px 0;
 			img {
 				min-width: 448px;
-				width: 60%;
+				width: 80%;
+				margin: 0 auto;
 			}
 		}
 		#date {
@@ -368,9 +394,10 @@ nav {
 				padding: 2rem;
 				position: relative;
 				z-index: 1;
-
+				h1 {
+					width: 100%;
+				}
 				p {
-					font-family: Georgia;
 					text-transform: none;
 				}
 			}
@@ -403,6 +430,9 @@ nav {
 		}
 		#three {
 			width: 41.375%;
+			#mission-content-mobile {
+				display: none;
+			}
 			#mission-content {
 				.display-flex;
 				.justify-content(center);
@@ -432,6 +462,7 @@ nav {
 					letter-spacing: 10px;
 				}
 				p {
+					font-family: 'nevis', san-serif;
 					font-size: .8rem;
 				}
 			}
@@ -456,17 +487,13 @@ nav {
 			text-align: center;
 
 			h1 {
-				font-size: 4rem;
-				border-bottom: 1px solid white;
 				width: 50%;
-				margin: 0 auto;
-				margin-bottom: 20px;
 			}
 			hr {
 				width: 50%;
 				height: 0;
 				border: 0;
-				border-top: 1px solid white;
+				border-top: 2px solid white;
 				color: white;
 				padding: 0;
 			}
@@ -480,9 +507,7 @@ nav {
 			text-align: left;
 
 			p {
-				font-size: .85rem;
 				display: none;
-				font-family: Georgia;
 				text-transform: none;
 				line-height: 1.5;
 			}
