@@ -19,13 +19,15 @@ define(function (require) {
 			// FAQ logic
 			$('.faq a').click(function (event) {
 				event.preventDefault();
-				$(this).parents('.faq').find('p').slideToggle();
+				var $target = $(this).parents('.faq').find('p');
+				$(this).parents('#faq').find('p').not($target).slideUp();
+				$target.slideToggle();
 			});
 
 			// Nav toggle
-			$('#menu-icon').click(function(e) {
-				e.preventDefault();
-				$('#nav-menu').slideToggle();
+			$('#menu-icon').click(function(event) {
+				event.preventDefault();
+				$('#main').toggleClass('staged');
 			});
 
 			// Navigation
@@ -43,8 +45,9 @@ define(function (require) {
 							if (route === 'home') {
 								BV.getPlayer().play();
 							}
-							$('#' + route).fadeIn()
+							$('#' + route).fadeIn();
 						});
+					$('#main').removeClass('staged');
 				};
 			};
 			var router = new Backbone.Router({

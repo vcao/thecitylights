@@ -9,6 +9,14 @@
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+.box-shadow (@value) {
+	-webkit-box-shadow: @value;
+	box-shadow: @value;
+}
+.box-shadow (@shadow1, @shadow2) {
+	-webkit-box-shadow: @shadow1, @shadow2;
+	box-shadow: @shadow1, @shadow2;
+}
 .display-flex {
   display: -webkit-flex;
   display: -webkit-box;
@@ -38,7 +46,7 @@
 }
 
 .placeholder(@typeface, @fstyle, @color, @font-size) {
-  
+
   ::-webkit-input-placeholder {
     font-family: @typeface;
     font-style: @fstyle;
@@ -73,4 +81,12 @@
     vertical-align: middle;
 
   }
+}
+.user-select (@value) {
+	-webkit-touch-callout: @value;
+	-webkit-user-select: @value;
+	-khtml-user-select: @value;
+	-moz-user-select: @value;
+	-ms-user-select: @value;
+	user-select: @value;
 }

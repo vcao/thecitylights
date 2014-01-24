@@ -1,0 +1,200 @@
+// DESKTOP MEDIA QUERY
+@media only screen and (min-width: 35em) {
+	section {
+		height: 100%;
+	}
+	nav {
+		position: absolute;
+		z-index: 1;
+		top: 140px;
+		left: 5%;
+		width: 120px;
+		padding: 0;
+		.box-shadow(none);
+		background-image: none;
+		ul {
+			li {
+				.transition(color .5s);
+				.box-shadow(none);
+				&:hover {
+					color: #777;
+				}
+			}
+		}
+	}
+	#logo {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 5%;
+		width: 120px;
+	}
+	#menu-icon {
+		display: none;
+	}
+	#email_signup {
+		position: absolute;
+		left: 5%;
+		bottom: 5%;
+		text-align: left;
+		input {
+			display: inline;
+		}
+	}
+	#home {
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		height: 100%;
+		.background-size(cover);
+		letter-spacing: 1px;
+		font-size: 1.15rem;
+		#tagline {
+			.display-flex;
+			.justify-content(center);
+			.align-items(center);
+			margin: 0;
+			height: 100%;
+			img {
+				min-width: 448px;
+				width: 80%;
+			}
+		}
+		#subheadline {
+			position: absolute;
+			top: 5%;
+			right: 5%;
+			h2 {
+				text-align: right;
+			}
+		}
+		#date {
+			position: absolute;
+			right: 5%;
+			bottom: 5%;
+			margin: 0;
+			text-align: right;
+		}
+	}
+	#about {
+		background: url('./../resources/images/bg-about.jpg') no-repeat;
+		.background-size(cover);
+		.container {
+			vertical-align: top;
+			overflow-y: scroll;
+			height: 100%;
+			padding-top: 80px;
+			text-align: justify;
+			#about-content {
+				position: relative;
+				z-index: 1;
+				margin: 0 auto;
+				width: 650px;
+				padding: 2rem;
+				background: rgba(0,0,0,.70);
+				h1 {
+					width: 100%;
+				}
+				p {
+					text-transform: none;
+				}
+			}
+		}
+	}
+	#mission {
+		width: 100%;
+		height: 100%;
+		white-space: nowrap;
+		#one, #two, #three {
+			position: relative;
+			z-index: 0;
+			display: inline-block;
+			float: left;
+			margin: 0;
+			height: 100%;
+			padding: 0;
+			border: 0;
+		}
+		#one {
+			width: 22%;
+			background: url('./../resources/images/bg-mission-one.jpg') center center;
+			.background-size(cover);
+		}
+		#two {
+			width: 36.625%;
+			background: url('./../resources/images/bg-mission-two.jpg') center center;
+			.background-size(cover);
+		}
+		#three {
+			width: 41.375%;
+			padding-top: 400px;
+			#mission-content-mobile {
+				display: none;
+			}
+			#mission-content {
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				display: block;
+				height: 400px;
+				width: 100%;
+				padding: 2.5rem 1rem 1rem;
+				background: url('./../resources/images/bg-mission-content.gif') repeat;
+				text-align: center;
+				line-height: 3;
+				letter-spacing: 1px;
+				h1 {
+					width: 80%;
+					margin: 0 auto;
+					border-bottom: 2px solid white;
+					font-size: 3rem;
+					line-height: 2;
+					letter-spacing: 10px;
+				}
+				p {
+					font-family: 'nevis', san-serif;
+					font-size: .8rem;
+				}
+			}
+			#threeImg {
+				height: 100%;
+				background: url('./../resources/images/bg-mission-three.jpg') bottom center no-repeat;
+				.background-size(cover);
+			}
+		}
+	}
+	#donate {
+		background: url('./../resources/images/bg-donate.jpg') center center no-repeat;
+		.background-size(cover);
+		.container {
+			vertical-align: top;
+			height: 100%;
+			padding-top: 80px;
+			text-align: center;
+			h1 {
+				width: 50%;
+			}
+			hr {
+				width: 50%;
+				height: 0;
+				padding: 0;
+				border: 0;
+				border-top: 2px solid white;
+				color: white;
+			}
+		}
+		#faq {
+			margin: 0 auto;
+			max-width: 50%;
+			padding: 1rem;
+			text-align: left;
+			p {
+				display: none;
+				text-transform: none;
+				line-height: 1.5;
+			}
+		}
+	}
+}

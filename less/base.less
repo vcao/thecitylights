@@ -1,0 +1,313 @@
+// Fonts
+@font-face {
+	font-family: 'nevis';
+	src: url('./../resources/fonts/nevis/nevis.eot');
+	src: url('./../resources/fonts/nevis/nevis.woff') format('woff'),
+		url('./../resources/fonts/nevis/nevis.ttf') format('truetype'),
+		url('./../resources/fonts/nevis/nevis.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+
+// Base
+html, body, {
+	overflow-x: hidden;
+	height: 100%;
+	background: #000;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+body {
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	background: #000;
+	font-family: "nevis", sans-serif;
+	color: #fff;
+}
+section {
+	display: none;
+	width: 100%;
+}
+
+/**************************
+				TYPOGRAPHY
+***************************/
+h1 {
+	margin: 0 auto;
+	//	border-bottom: 2px solid white;
+	width: 80%;
+	text-align: center;
+	line-height: 2;
+	letter-spacing: 10px;
+	font-size: 3rem;
+}
+p {
+	font-family: 'Ubuntu', san-serif;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/**************************
+				NAVIGATION
+**************************/
+nav {
+	.user-select(none);
+	position: absolute;
+	z-index: -1;
+	height: 100%;
+	padding: 20px;
+	.box-shadow(inset 0px 4px 18px -4px rgba(0, 0, 0, 0.7));
+	background-image: url('./../resources/images/linenGray.jpg');
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		li {
+			padding: 1rem 0;
+			.box-shadow(@shadowDropBottomSmallLight);
+			text-align: center;
+			&:last-child {
+				.box-shadow(none);
+			}
+		}
+		a {
+			font-size: .95rem;
+			letter-spacing: 0.3em;
+			text-transform: capitalize;
+		}
+	}
+}
+#main {
+	.transition(left 300ms ease);
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	overflow: scroll;
+	width: 100%;
+	height: 100%;
+	.box-shadow(-4px 0px 10px -4px rgba(0, 0, 0, 0.5));
+	background: #000;
+	&.staged {
+		left: 137px;
+	}
+}
+#menu-icon {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 1.25rem;
+	svg {
+		opacity: 0.9;
+	}
+	a {
+		color: rgba(255,255,255,0.9);
+	}
+	span {
+		vertical-align: text-bottom;
+	}
+}
+#logo {
+	display: block;
+	margin: 0 auto;
+	width: 104px;
+	padding: 0;
+	img {
+		width: 100%;
+	}
+}
+#email_signup {
+	position: relative;
+	z-index: 1;
+	display: block;
+	text-align: center;
+	label {
+		display: block;
+	}
+	input {
+		display: block;
+		margin: .5rem auto;
+	}
+	.placeholder("Georgia", "italic", "#ccc", 0.75);
+	input[type="email"] {
+		vertical-align: bottom;
+		width: 150px;
+		height: 30px;
+		padding: 2px 5px;
+		background: transparent;
+		border: 1px solid #ccc;
+		font-family: "Helvetica Neue";
+		color: white;
+	}
+	input[type="submit"] {
+		.transition(.25s);
+		background: transparent;
+		height: 30px;
+		padding: 2px 5px;
+		border: 2px solid white;
+		.border-radius(0);
+		font-size: .9rem;
+		color: white;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		&:hover {
+			color: rgba(255, 213, 153, 1.0);
+			border: 2px solid rgba(255, 213, 153, 1.0);
+		}
+	}
+}
+#home {
+	width: 100%;
+	#big-video-wrap {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		width: 100%;
+		height: 100%
+	}
+	#tagline {
+		text-align: center;
+		img {
+			width: 85%;
+		}
+	}
+	#subheadline {
+		h2{
+			text-align: center;
+			font-size: 1rem;
+		}
+	}
+	#date {
+		margin: 0 0 1rem 0;
+		font-size: 1rem;
+		line-height: 1.5;
+		text-align: center;
+	}
+}
+#mission {
+	background: #000;
+	#one, #two {
+		display: none;
+	}
+	#three {
+		width: 100%;
+		#mission-content-mobile {
+			margin: 0 auto;
+			width: 90%;
+			font-size: 1rem;
+			font-weight: bold;
+			text-align: justify;
+			h1 {
+				width: auto;
+			}
+		}
+		#mission-content {
+			display: none;
+			margin: 0 auto;
+			width: 90%;
+			font-size: 1rem;
+			text-align: justify;
+		}
+	}
+}
+#about {
+	background: #000;
+	.background-size(cover);
+	.container {
+		height: 100%;
+		vertical-align: top;
+		text-align: justify;
+	}
+	#about-content {
+		position: relative;
+		z-index: 1;
+		padding: 1rem;
+	}
+}
+#donate {
+	padding: 0 5px;
+	.container {
+		overflow-y: auto;
+	}
+	#donate-container {
+		width: 300px;
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+	form {
+		@aHt: 45px;
+		#amountContainer {
+			position: relative;
+			z-index: 0;
+			margin: 0 auto 5px;
+			height: @aHt;
+			background: #fff;
+			.border-radius(3px);
+			white-space: nowrap;
+			#aLeft, #aRight {
+				position: absolute;
+				z-index: 1;
+				vertical-align: center;
+				height: @aHt;
+				padding-top: 13px;
+				color: #ccc;
+			}
+			#aLeft {
+				top: 0;
+				left: 0;
+				padding-left: 5px;
+			}
+			#aRight {
+				top:0;
+				right:0;
+				padding-right: 5px;
+				text-align: right;
+			}
+			input#amount {
+				display: inline-block;
+				margin: 0;
+				height: @aHt;
+				border: 1px solid white;
+				background: #fff;
+				text-align: center;
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+		button[type="submit"] {
+			.transition(.25s);
+			display: block;
+			margin: 10px auto 0;
+			height: @aHt;
+			width: 220px;
+			padding: 0;
+			border: 2px solid white;
+			background: transparent;
+			color: white;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			&:hover {
+				color: rgba(255, 213, 153, 1.0);
+				border: 2px solid rgba(255, 213, 153, 1.0);
+			}
+		}
+	}
+}
+#faq {
+	position: relative;
+	z-index: 1;
+	background: rgba(0,0,0,.25);
+	p {
+		display: none;
+		text-transform: none;
+		text-align: justify;
+	}
+}
